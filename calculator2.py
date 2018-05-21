@@ -28,11 +28,12 @@ def cal(salary):
     finalmoney = format(finalmoney, ".2f")
     return finalmoney
 
-allsalary = sys.argv[1:]
-for i in allsalary:
-    j = i.split(':')
-    try:
-        j[1] = cal(int(j[1])) 
-        print(j[0] + ':' + j[1])
-    except ValueError:
-        print('Parameter Error')
+if __name__ == '__main__':
+    allsalary = sys.argv[1:]
+    for i in allsalary:
+        j = i.split(':')
+        try:
+            j[1] = cal(int(j[1])) 
+            print(j[0] + ':' + j[1])
+        except ValueError:
+            print('Parameter Error')
